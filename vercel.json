@@ -1,0 +1,39 @@
+{
+  "version": 2,
+  "rewrites": [
+    {
+      "source": "/api/trakt/callback",
+      "destination": "/api/trakt/callback"
+    },
+    {
+      "source": "/api/addon/:p1/:p2",
+      "destination": "/api/addon/[...params]?p1=:p1&p2=:p2"
+    },
+    {
+      "source": "/api/addon/:p1/:p2/:p3",
+      "destination": "/api/addon/[...params]?p1=:p1&p2=:p2&p3=:p3"
+    },
+    {
+      "source": "/api/addon/:p1/:p2/:p3/:p4",
+      "destination": "/api/addon/[...params]?p1=:p1&p2=:p2&p3=:p3&p4=:p4"
+    },
+    {
+      "source": "/",
+      "destination": "/api/index"
+    },
+    {
+      "source": "/configure",
+      "destination": "/api/index"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET,OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "*" }
+      ]
+    }
+  ]
+}
