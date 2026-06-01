@@ -1,5 +1,6 @@
 # Stremio AI Recommendations
 
+
 Vercel-hosted Stremio addon that recommends movies and series from your Trakt watch history using Mistral AI.
 
 ## Vercel environment variables
